@@ -1,0 +1,79 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+.main{
+  width: 600px;
+  margin: 0 auto;
+  text-align: center; 
+}
+
+a {
+  color: #494949;
+  text-decoration: none
+}
+
+.logo{
+  text-align: center;
+  margin-bottom: 40px;
+}
+.logo img{
+  width: 200px;
+  height: 60px;
+  vertical-align: bottom;
+}
+.logo span{
+  font-size: 30px;
+  font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;;
+  margin-bottom: 10px;
+  vertical-align: middle;
+  
+}
+.search{
+  width: 510px;
+  padding: 14.5px 10px 12.5px;
+  border: 1px solid grey;
+  border-right: none;
+}
+.soso{
+  height: 44.5px;
+  width: 60px;
+  padding: 2px 1px 2px 2px ;
+  border: 1px solid grey;
+  cursor: pointer;
+}
+.soso:active{
+  background-color: darkgrey;
+}
+ul li{
+  list-style-type: none
+}
+.content{
+  margin: 30px 0px;
+}
+.content ul{
+  margin: 0;
+  padding: 0;
+}
+.content ul li .book_item{
+  overflow: hidden;
+  margin-left: 5px;
+  padding-bottom: 30px;
+  width: 600px;
+  border-bottom: 1px solid #d3d3d3;
+}
+.content ul li div h2{
+  text-align: left;
+  font-size: 20px;
+}
+.content ul li div img{
+  float: left;
+  width: 135px;
+  height: 190.88px;
+  margin-right: 20px;
+}
+.content ul li div div span{
+  display: block;
+  text-align: left;
+  margin-bottom: 10px;
+}

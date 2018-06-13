@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>小白搜书</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <script src="/javascripts/vue.js"></script>
+    <script src="/javascripts/axios.js"></script>
+  </head>
+  <body>
+    <div class="main" id="app">
+        <div class="logo">
+            <img src="/images/logo2.png"> 
+            <span>小白搜书</span>
+          </div>
+          <input type="text" class="search" id="search-input" placeholder="请输入书籍名称作者或者isbn" @keyup.13="search"><button class="soso" @click="search">搜搜</button>
+          <div class="content" v-show="books">
+            <ul v-for="item in books">
+              <li>
+                <div class="book_item">
+                  <h2>
+                    <a :href="item.url">
+                    {{item.name}}  
+                    </a>  
+                  </h2>
+                  <a :href="item.url"><img :src="'https://images.weserv.nl/?url='+item.image.slice(8)"  alt="tupian"></a>
+                  <div style="float: left">
+                    <span v-if="item.author">
+                      作者:  {{item.author}}
+                    </span>
+                    <span  v-if="item.publisher">
+                      出版社: {{item.publisher}}
+                    </span>
+                    <span  v-if="item.pubdate">
+                        出版年: {{item.pubdate}}
+                    </span>
+                    <span  v-if="item.price">
+                        定价: {{item.price}}
+                    </span>
+                    <span>
+                        ISBN: {{item.isbn}}
+                    </span>
+                    <span>
+                      评分: {{item.rating}}
+                    </span>
+                    <span>
+                      <a :href="item.url"> >> 豆瓣详情</a>
+                    </span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content" v-show="show">
+            <img src="/images/404.gif" alt="" style="width: 93%">
+          </div>
+    </div>
+  </body>
+</html>
+<script src="/javascripts/index.js"></script>
